@@ -78,6 +78,7 @@ if ($result === "") {
 <head>
     <meta charset="UTF-8" />
     <title>HiberWhisper</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Chargement de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chargement de SweetAlert2 -->

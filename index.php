@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>HiberWhisper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Chargement de Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Chargement de SweetAlert2 -->
@@ -12,7 +13,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/ieo2idj.css" />
 </head>
 
-<body>
+<body class="text-lg">
   <!-- Header (only logo on the top left) (anchered) -->
   <header class="fixed">
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
@@ -20,7 +21,7 @@
     </div>
   </header>
   <div class="min-h-screen bg-blue-200 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-full sm:max-w-screen-md md:max-w-md">
       <h1 class="text-2xl mb-4" style="font-family: ohno-blazeface">
         HiberWhisper
       </h1>
@@ -70,7 +71,6 @@
   <script>
     const input = document.getElementById('audio-file');
     const label = document.querySelector('.custom-file-label');
-
     input.addEventListener('change', () => {
       const fileName = input.files[0].name;
       label.textContent = fileName;
