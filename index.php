@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-screen">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/ieo2idj.css" />
 </head>
 
-<body class="text-lg">
+<body class="text-lg overflow-hidden">
   <!-- Header (only logo on the top left) (anchered) -->
   <div class="min-h-screen bg-blue-200 flex items-center justify-center">
     <div class="bg-white p-8 ml-4 mr-4 rounded-2xl shadow-sm w-full sm:max-w-screen-md md:max-w-md">
@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <footer class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-gray-600 md:items-center justify-between fixed bottom-0">
+  <footer class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-gray-600 md:items-center justify-between sticky inset-x-0 bottom-0">
     <ul class="flex flex-col md:flex-row items-start md:items-center md:justify-start">
       <li class="m-2">HiberFile Team</li>
     </ul>
