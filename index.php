@@ -60,7 +60,7 @@
       </div>
     </div>
   </div>
-  <footer class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-gray-600 md:items-center justify-between sticky inset-x-0 bottom-0">
+  <footer class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-gray-600 md:items-center justify-between fixed bottom-0">
     <ul class="flex flex-col md:flex-row items-start md:items-center md:justify-start">
       <li class="m-2">HiberFile Team</li>
     </ul>
