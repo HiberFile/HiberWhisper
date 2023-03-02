@@ -120,6 +120,9 @@ if ($result === "") {
             </div>
         </div>
     </div>
+    <footer class="fixed bottom-8 left-8 h-8 w-full text-white text-sm flex items-center justify-start">
+        <div class="px-4">© 2023 HiberFile Team</div>
+    </footer>
     <script>
         // Copie le texte transcrit dans le presse-papier
         const copyButton = document.getElementById("copy-button");
