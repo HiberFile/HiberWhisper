@@ -116,8 +116,10 @@ if ($result === "") {
             </div>
         </div>
     </div>
-    <footer class="absolute left-0 bottom-0 h-8 text-white text-sm flex items-center justify-start">
-        <div class="px-4">© 2023 HiberFile Team</div>
+    <footer class="flex flex-col md:flex-row items-start w-full flex-none self-start p-6 md:p-8 font-medium text-xs text-gray-600 md:items-center justify-between fixed bottom-0">
+        <ul class="flex flex-col md:flex-row items-start md:items-center md:justify-start">
+            <li class="m-2">HiberFile Team</li>
+        </ul>
     </footer>
     <script>
         // Copie le texte transcrit dans le presse-papier
