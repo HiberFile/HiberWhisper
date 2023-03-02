@@ -87,16 +87,11 @@ if ($result === "") {
     <link rel="stylesheet" href="https://use.typekit.net/ieo2idj.css" />
 </head>
 
-<body>
+<body class="text-lg">
     <!-- Header (only logo on the top left) (anchered) -->
-    <header class="fixed">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <img src="logo.png" alt="HiberWhisper" class="h-12 w-auto" />
-        </div>
-    </header>
     <div class="min-h-screen bg-blue-200 flex items-center justify-center">
-        <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-            <h1 class="text-2xl mb-4" style="font-family: ohno-blazeface">
+        <div class="bg-white p-8 rounded-2xl shadow-sm w-full sm:max-w-screen-md md:max-w-md">
+            <h1 class="text-4xl mb-4" style="font-family: ohno-blazeface">
                 HiberWhisper
             </h1>
             <hr />
@@ -121,7 +116,7 @@ if ($result === "") {
             </div>
         </div>
     </div>
-    <footer class="fixed bottom-8 left-8 h-8 w-full text-white text-sm flex items-center justify-start">
+    <footer class="absolute left-8 bottom-8 h-8 text-white text-sm flex items-center justify-start">
         <div class="px-4">© 2023 HiberFile Team</div>
     </footer>
     <script>
