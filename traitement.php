@@ -90,7 +90,7 @@ if ($result === "") {
 <body class="text-lg">
     <!-- Header (only logo on the top left) (anchered) -->
     <div class="min-h-screen bg-blue-200 flex items-center justify-center">
-        <div class="bg-white p-8 rounded-2xl shadow-sm w-full sm:max-w-screen-md md:max-w-md">
+        <div class="bg-white p-8 ml-4 mr-4 rounded-2xl shadow-sm w-full sm:max-w-screen-md md:max-w-md">
             <h1 class="text-4xl mb-4" style="font-family: ohno-blazeface">
                 HiberWhisper
             </h1>
@@ -116,7 +116,7 @@ if ($result === "") {
             </div>
         </div>
     </div>
-    <footer class="absolute left-8 bottom-8 h-8 text-white text-sm flex items-center justify-start">
+    <footer class="absolute left-0 bottom-0 h-8 text-white text-sm flex items-center justify-start">
         <div class="px-4">© 2023 HiberFile Team</div>
     </footer>
     <script>
