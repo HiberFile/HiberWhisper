@@ -87,7 +87,7 @@ if ($result === "") {
     <link rel="stylesheet" href="https://use.typekit.net/ieo2idj.css" />
 </head>
 
-<body class="text-lg overflow-hidden">
+<body class="text-lg">
     <!-- Header (only logo on the top left) (anchered) -->
     <div class="min-h-screen bg-blue-200 flex items-center justify-center">
         <div class="bg-white p-8 ml-4 mr-4 rounded-2xl shadow-sm w-full sm:max-w-screen-md md:max-w-md">
