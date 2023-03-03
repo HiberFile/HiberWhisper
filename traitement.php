@@ -5,7 +5,7 @@ ini_set('display_errors', 0);
 ini_set('display_startup_errors', 0);
 error_reporting(0);
 
-$result = "";
+$result$result = "";
 
 // Check if POST content length is too large
 if ($_SERVER['CONTENT_LENGTH'] > 10000000) {
@@ -44,31 +44,36 @@ if ($file['type'] !== 'audio/mpeg') {
     $result = "Le type de fichier " . $file['type'] . " n'est pas supporté. Le fichier doit être de type audio/mpeg.";
 }
 
-// Préparation de la requête API
-$client = new Client(['headers' => ['Authorization' => 'Bearer ' . $api_key]]);
-$url = 'https://api.openai.com/v1/audio/transcriptions';
-$options = [
-    'multipart' => [
-        [
-            'name' => 'file',
-            'contents' => fopen($file['tmp_name'], 'r'),
-            'filename' => $file['name'],
+// Vérification que le chemin de fichier n'est pas vide
+$file_path = $file['tmp_name'];
+if (!empty($file_path)) {
+    // Préparation de la requête API
+    $client = new Client(['headers' => ['Authorization' => 'Bearer ' . $api_key]]);
+    $url = 'https://api.openai.com/v1/audio/transcriptions';
+    $options = [
+        'multipart' => [
+            [
+                'name' => 'file',
+                'contents' => fopen($file_path, 'r'),
+                'filename' => $file['name'],
+            ],
+            [
+                'name' => 'model',
+                'contents' => 'whisper-1',
+            ],
         ],
-        [
-            'name' => 'model',
-            'contents' => 'whisper-1',
-        ],
-    ],
-];
+    ];
 
-// Envoi de la requête API et récupération du résultat (mais seulement si le fichier audio est valide)
-if ($result === "") {
+    // Envoi de la requête API et récupération du résultat
     try {
         $result = json_decode($client->post($url, $options)->getBody(), true)['text'];
     } catch (RequestException $e) {
         http_response_code(400);
         $result = "Erreur lors de la transcription de l'audio : " . $e->getMessage();
     }
+} else {
+    http_response_code(400);
+    $result = "Le chemin de fichier est vide.";
 }
 ?>
 
