@@ -22,7 +22,7 @@
       </h1>
       <hr />
       <p class="mb-4 mt-4">
-        Service de transcription <u>gratuit</u> d'audio qui convertit
+        Service de transcription d'audio <u>gratuit</u> qui convertit
         n'importe quel fichier audio MP3 en texte grâce à l'API d'OpenAI
         (Whisper).
       </p>
