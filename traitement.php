@@ -8,10 +8,11 @@ error_reporting(0);
 $result = "";
 
 // Check if POST content length is too large
-if ($_SERVER['CONTENT_LENGTH'] > 10000000) {
+if ($_SERVER['CONTENT_LENGTH'] > 50000000) {
     http_response_code(400);
     // Show error message in $result and exit
-    $result = "Le fichier audio est trop volumineux. La taille maximale est de 10 Mo.";
+    header("Location: index.php");
+    exit;
 }
 
 require 'vendor/autoload.php';
